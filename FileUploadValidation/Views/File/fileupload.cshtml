@@ -1,0 +1,29 @@
+﻿@model FileUploadValidation.Models.FileUpload1
+
+@{
+    ViewBag.Title = "Satyaprakash File Upload";
+}
+<h2 style="background-color: Yellow;color: Blue; text-align: center; font-style: oblique">SATYA'S WORD/PDF/EXCEL/TXT UPLOAD FILE VALIDATION</h2>
+
+<fieldset>
+    <legend style="font-family:Arial Black;color:blue">Upload Here</legend>
+    <form action="" method="post" enctype="multipart/form-data">
+        @if (ViewBag.ResultErrorMessage != null)
+        {
+            <script type="text/javascript">
+
+    window.onload = function () {
+        alert("@ViewBag.ResultErrorMessage");
+       };
+            </script>
+        }
+        <input type="file" name="file" id="file " />
+        <div>
+            <input type="submit" value="Upload" />
+        </div>
+    </form>
+</fieldset>
+
+<footer>
+    <p style="background-color: Yellow; color: Blue; text-align: center; font-style: oblique">© @DateTime.Now.ToLocalTime()</p> @*Add Date Time*@
+</footer>   
